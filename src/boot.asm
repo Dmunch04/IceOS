@@ -1,6 +1,6 @@
 [bits 32]
 global start
-extern _KernelMain
+extern _kernelMain
 section .mbHeader
 
 align 0x4
@@ -18,4 +18,4 @@ MultiBootHeader:
 
 start:
   push ebx
-  call _KernelMain
+  call _kernelMain

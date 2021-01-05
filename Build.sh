@@ -1,14 +1,14 @@
 # Go to the source folder
-cd Source
+cd src
 
 # Build the Bootloader file
-nasm -f elf Boot.asm -o Boot.o
+nasm -f elf boot.asm -o boot.o
 
 # Build all the C++ OS files
-g++ -c Kernel.cpp -o Kernel.o -ffreestanding -fno-exceptions -fno-rtti -m32
-g++ -c Console.cpp -o Console.o -ffreestanding -fno-exceptions -fno-rtti -m32
-g++ -c Helper.cpp -o Helper.o -ffreestanding -fno-exceptions -fno-rtti -m32
-g++ -c Colors.cpp -o Colors.o -ffreestanding -fno-exceptions -fno-rtti -m32
+g++ -c kernel.cpp -o kernel.o -ffreestanding -fno-exceptions -fno-rtti -m32
+g++ -c console.cpp -o console.o -ffreestanding -fno-exceptions -fno-rtti -m32
+g++ -c helper.cpp -o helper.o -ffreestanding -fno-exceptions -fno-rtti -m32
+g++ -c colors.cpp -o colors.o -ffreestanding -fno-exceptions -fno-rtti -m32
 
 # Run the makefile, which will finish things up, make the iso file and clean up
 make
